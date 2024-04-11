@@ -14,15 +14,18 @@
   justify-content: center;
   object-fit: contain;
 }
-
 .image {
   border: 2px solid var(--color-border);
   border-radius: 0 0 30px 30px;
   width: 229px;
 }
-
-@media screen and (min-width: 435px) {
+@media screen and (min-width: 600px) and (max-width: 1299px) {
   .image {
-    width: 810px;
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .image {
+    width: 800px;
   }
 }
