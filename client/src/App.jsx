@@ -7,8 +7,8 @@ function App() {
   return (
     <main>
       <NavBar />
-      <ImgOfTheDay />
       <ImgDetails />
+      <ImgOfTheDay />
     </main>
   );
 }
