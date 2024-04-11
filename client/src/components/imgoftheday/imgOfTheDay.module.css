@@ -1,0 +1,31 @@
+:root {
+  --color-primary-blue: #134074; /* Main color */
+  --color-gradient-top: #134074; /* Gradient color for the Top*/
+  --color-gradient-mid: #13315c; /* Gradient color for the Middle  */
+  --color-gradient-bottom: #8da9c4; /*Gradient color for the Bottom */
+  --color-themeMode-button: #d9d9d9; /* Color the button Dark/light*/
+  --color-button: #600e26; /* Color for every other button */
+  --color-border: #000000; /* Color for the border solid box */
+  --color-background: #1e2a4a; /* Color for the background  */
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+}
+.image {
+  border: 2px solid var(--color-border);
+  border-radius: 0 0 30px 30px;
+  width: 229px;
+}
+@media screen and (min-width: 600px) and (max-width: 1299px) {
+  .image {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .image {
+    width: 800px;
+  }
+}
