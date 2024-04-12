@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./imgOfTheDay.module.css";
+import styles from "./ImageOfTheDay.module.css";
 
 function ImgOfTheDay () {
     const [imgDay , setImgDay] = useState([])
