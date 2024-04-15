@@ -8,8 +8,8 @@ function App() {
   return (
     <main>
       <NavBar />
-      <ImgDetails />
       <ImgOfTheDay />
+      <ImgDetails />
       <Category />
       <Category />
       <Category />
