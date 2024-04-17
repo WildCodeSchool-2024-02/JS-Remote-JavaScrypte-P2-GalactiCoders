@@ -6,6 +6,15 @@ import Category from "./components/category/Category";
 
 function App() {
   const [apiImage, setApiImage] = useState(null);
+  const [imgDay , setImgDay] = useState([])
+
+  useEffect (() => {
+     fetch("https://api.nasa.gov/planetary/apod?api_key=HTe12sCsEjed1E521B1vpAQ90k1IKIzLLbmWvRvy")
+     .then(response => response.json())
+     .then(data => setImgDay(data))
+
+  }, [])
+
   
   useEffect(() => {
     fetch("https://images-api.nasa.gov/search?keywords=galaxy")
@@ -16,7 +25,7 @@ function App() {
   return (
     <main>
       <NavBar />
-      <ImgOfTheDay />
+      <ImgOfTheDay imgDay={imgDay} />
       <ImgDetails />
       {apiImage && <Category apiImage={apiImage.collection.items}/>}
       {apiImage && <Category apiImage={apiImage.collection.items}/>}
