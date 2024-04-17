@@ -6,7 +6,7 @@ return (
     <NavBar />
 <div>
     <img src="" alt="" />
-    <h1>Detailles Images </h1>
+    <h1>Details Images </h1>
     <p>Description </p>
 </div>
 </>

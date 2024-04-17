@@ -29,6 +29,7 @@
 .title {
   margin: 1%;
   align-self: flex-start;
+  color: var(--color-themeMode-button);
 }
 .description {
   margin: 1%;
@@ -36,6 +37,7 @@
   align-self: flex-start;
   font-size: 11px;
   max-width: fit-content;
+  color: var(--color-themeMode-button);
 }
 .detailsbutton {
   background-color: var(--color-button);
@@ -48,13 +50,18 @@
 }
 @media screen and (min-width: 600px) {
   .container {
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    border: solid 2px var(--color-border);
+    background-color: var(--color-gradient-top);
+    border-radius: 1rem;
     width: 400px;
     margin-left: 100em;
     margin-top: 10em;
   }
   .img {
-    height: 480px;
+    height: 230px;
     width: 400px;
   }
 }

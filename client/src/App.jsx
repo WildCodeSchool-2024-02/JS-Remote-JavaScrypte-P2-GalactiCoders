@@ -8,6 +8,7 @@ import "./App.css";
 function App() {
   const [apiImage, setApiImage] = useState(null);
   const [imgDay, setImgDay] = useState([]);
+  const [selectedImage, setSelectedImage] = useState();
 
   useEffect(() => {
     fetch(
@@ -23,21 +24,37 @@ function App() {
       .then((data) => setApiImage(data))
       .catch((error) => console.error("Error", error));
   }, []);
+
+  const handleImageClick = (item) => {
+    setSelectedImage(item);
+  };
+
   return (
     <main className="mainBody">
       <NavBar />
       <ImgOfTheDay imgDay={imgDay} />
 
-      <ImgDetails className="itemDetails" />
+      {selectedImage && (
+        <ImgDetails className="itemDetails" selectedImage={selectedImage} />
+      )}
       <div className="mainContainer">
         {apiImage && (
-          <Category className="item1" apiImage={apiImage.collection.items} />
+          <Category
+            apiImage={apiImage.collection.items}
+            handleImageClick={handleImageClick}
+          />
         )}
         {apiImage && (
-          <Category className="item2" apiImage={apiImage.collection.items} />
+          <Category
+            apiImage={apiImage.collection.items}
+            handleImageClick={handleImageClick}
+          />
         )}
         {apiImage && (
-          <Category className="item3" apiImage={apiImage.collection.items} />
+          <Category
+            apiImage={apiImage.collection.items}
+            handleImageClick={handleImageClick}
+          />
         )}
       </div>
     </main>
