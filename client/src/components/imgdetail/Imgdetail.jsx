@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./ImgDetail.module.css";
 
@@ -14,9 +15,9 @@ function ImgDetails({ selectedImage }) {
       />
       <h1 className={styles.title}>{selectedImage.data[0].title}</h1>
       <p className={styles.description}>{firstTwoSentences}</p>
-      <button className={styles.detailsbutton} type="submit">
+      <Link to="http://localhost:3000/details" className={styles.detailsbutton}>
         About
-      </button>
+      </Link>
     </div>
   );
 }
