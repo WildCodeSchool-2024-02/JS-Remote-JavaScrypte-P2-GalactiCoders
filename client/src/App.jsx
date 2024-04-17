@@ -18,10 +18,19 @@ function App() {
     <main className="mainBody">
       <NavBar />
       <ImgOfTheDay />
-      <ImgDetails />
-      {apiImage && <Category apiImage={apiImage.collection.items} />}
-      {apiImage && <Category apiImage={apiImage.collection.items} />}
-      {apiImage && <Category apiImage={apiImage.collection.items} />}
+
+      <ImgDetails className="itemDetails" />
+      <div className="mainContainer">
+        {apiImage && (
+          <Category className="item1" apiImage={apiImage.collection.items} />
+        )}
+        {apiImage && (
+          <Category className="item2" apiImage={apiImage.collection.items} />
+        )}
+        {apiImage && (
+          <Category className="item3" apiImage={apiImage.collection.items} />
+        )}
+      </div>
     </main>
   );
 }

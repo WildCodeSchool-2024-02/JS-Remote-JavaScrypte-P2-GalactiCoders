@@ -10,3 +10,7 @@ body {
   padding-bottom: 50px;
   padding-top: 71px;
 }
+.mainContainer {
+  margin-top: -20em;
+  margin-left: 5em;
+}
