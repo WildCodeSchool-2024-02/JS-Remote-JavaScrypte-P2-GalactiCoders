@@ -35,15 +35,9 @@ function App() {
       <NavBar />
       <ImgOfTheDay imgDay={imgDay} />
       {selectedImage && <ImgDetails selectedImage={selectedImage} />}
-      {apiImage && (
-        <Category
-          apiImage={apiImage.collection.items}
-          handleImageClick={handleImageClick}
-        />
-      )}
-      {apiImage && <Category apiImage={apiImage.collection.items} />}
-      {apiImage && <Category apiImage={apiImage.collection.items} />}
-      {apiImage && <Category apiImage={apiImage.collection.items} />}
+      {apiImage && (<Category apiImage={apiImage.collection.items} handleImageClick={handleImageClick}/>)}
+      {apiImage && (<Category apiImage={apiImage.collection.items} handleImageClick={handleImageClick}/>)}
+      {apiImage && (<Category apiImage={apiImage.collection.items} handleImageClick={handleImageClick}/>)}
     </main>
   );
 }
