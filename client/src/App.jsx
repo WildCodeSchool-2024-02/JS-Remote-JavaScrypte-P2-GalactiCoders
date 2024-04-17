@@ -6,10 +6,10 @@ import Category from "./components/category/Category";
 
 function App() {
   return (
-    <main>
+    <main className="mainBody">
       <NavBar />
-      <ImgDetails />
       <ImgOfTheDay />
+      <ImgDetails />
       <Category />
       <Category />
       <Category />

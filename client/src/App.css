@@ -1,0 +1,12 @@
+html,
+body {
+  padding: 0 !important;
+
+  margin: 0 !important;
+}
+.mainBody {
+  background-image: url("../src/assets/images/MainBackGround.jpg");
+  background-size: cover;
+  padding-bottom: 50px;
+  padding-top: 71px;
+}
