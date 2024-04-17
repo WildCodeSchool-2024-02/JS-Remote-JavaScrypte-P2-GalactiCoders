@@ -11,8 +11,7 @@
 
 .category {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background: linear-gradient(
     180deg,
