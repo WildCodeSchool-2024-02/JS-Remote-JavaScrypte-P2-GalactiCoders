@@ -1,7 +1,6 @@
 html,
 body {
   padding: 0 !important;
-
   margin: 0 !important;
 }
 .mainBody {
@@ -10,7 +9,9 @@ body {
   padding-bottom: 50px;
   padding-top: 71px;
 }
-.mainContainer {
-  margin-top: -20em;
-  margin-left: 5em;
+@media screen and (min-width: 600px) {
+  .mainContainer {
+    margin-top: -30em;
+    margin-left: 15em;
+  }
 }

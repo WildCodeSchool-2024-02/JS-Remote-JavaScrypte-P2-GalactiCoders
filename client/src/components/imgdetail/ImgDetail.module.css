@@ -8,7 +8,6 @@
   --color-border: #000000; /* Color for the border solid box */
   --color-background: #1e2a4a; /* Color for the background  */
 }
-
 .container {
   display: flex;
   flex-direction: column;
@@ -21,19 +20,16 @@
   margin: auto;
   padding: 0.5rem;
 }
-
 .img {
   width: 320px;
   height: 190px;
   border: solid 1px var(--color-border);
   border-radius: 1rem;
 }
-
 .title {
   margin: 1%;
   align-self: flex-start;
 }
-
 .description {
   margin: 1%;
   padding-right: 4rem;
@@ -41,7 +37,6 @@
   font-size: 11px;
   max-width: fit-content;
 }
-
 .detailsbutton {
   background-color: var(--color-button);
   color: #ffffff;
@@ -51,13 +46,12 @@
   width: 5rem;
   align-self: flex-end;
 }
-
 @media screen and (min-width: 600px) {
   .container {
     height: 500px;
     width: 400px;
-    margin-right: 1%;
-    margin-top: 2%;
+    margin-left: 100em;
+    margin-top: 10em;
   }
   .img {
     height: 480px;
