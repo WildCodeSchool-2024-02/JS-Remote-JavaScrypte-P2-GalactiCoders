@@ -8,6 +8,7 @@
   --color-border: #000000; /* Color for the border solid box */
   --color-background: #1e2a4a; /* Color for the background  */
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -20,17 +21,20 @@
   margin: auto;
   padding: 0.5rem;
 }
+
 .img {
   width: 320px;
   height: 190px;
   border: solid 1px var(--color-border);
   border-radius: 1rem;
 }
+
 .title {
   margin: 1%;
   align-self: flex-start;
   color: var(--color-themeMode-button);
 }
+
 .description {
   margin: 1%;
   padding-right: 4rem;
@@ -39,6 +43,7 @@
   max-width: fit-content;
   color: var(--color-themeMode-button);
 }
+
 .detailsbutton {
   background-color: var(--color-button);
   color: #ffffff;
@@ -48,6 +53,7 @@
   width: 5rem;
   align-self: flex-end;
 }
+
 @media screen and (min-width: 600px) {
   .container {
     display: flex;
@@ -57,8 +63,7 @@
     background-color: var(--color-gradient-top);
     border-radius: 1rem;
     width: 400px;
-    margin-left: 100em;
-    margin-top: 10em;
+    margin-top: 1%;
   }
   .img {
     height: 230px;

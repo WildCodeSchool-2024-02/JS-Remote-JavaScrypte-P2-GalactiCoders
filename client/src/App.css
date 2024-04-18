@@ -5,13 +5,17 @@ body {
 }
 .mainBody {
   background-image: url("../src/assets/images/MainBackGround.jpg");
+  background-color: #1e2a4a;
   background-size: cover;
-  padding-bottom: 50px;
   padding-top: 71px;
 }
 @media screen and (min-width: 600px) {
   .mainContainer {
-    margin-top: -30em;
-    margin-left: 15em;
+    position: relative;
+  }
+  .rightAside {
+    position: absolute;
+    top: 20em;
+    right: 5em;
   }
 }
