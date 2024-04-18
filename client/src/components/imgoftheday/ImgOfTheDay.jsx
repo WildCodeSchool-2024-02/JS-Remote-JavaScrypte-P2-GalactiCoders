@@ -1,11 +1,13 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import styles from "./ImageOfTheDay.module.css";
 
-function ImgOfTheDay ({imgDay}) {
-
+function ImgOfTheDay({ imgDay }) {
   return (
-    <div className={styles.box}>
-      <img className={styles.image} src={imgDay.url} alt={imgDay.title} />
+    <div className={styles.mainContainer}>
+      <figure
+        className={styles.box}
+        style={{ backgroundImage: `url(${imgDay.url})` }}
+      />
     </div>
   );
 }
@@ -13,5 +15,5 @@ function ImgOfTheDay ({imgDay}) {
 export default ImgOfTheDay;
 
 ImgOfTheDay.propTypes = {
-    imgDay: PropTypes.string.isRequired,
-}
+  imgDay: PropTypes.string.isRequired,
+};

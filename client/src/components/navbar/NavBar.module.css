@@ -1,26 +1,19 @@
 :root {
-  --color-primary-blue: #134074; /* Main color */
-  --color-gradient-top: #134074; /* Gradient color for the Top*/
-  --color-gradient-mid: #13315c; /* Gradient color for the Middle  */
-  --color-gradient-bottom: #8da9c4; /*Gradient color for the Bottom */
-  --color-themeMode-button: #d9d9d9; /* Color the button Dark/light*/
-  --color-button: #600e26; /* Color for every other button */
-  --color-border: #000000; /* Color for the border solid box */
-  --color-background: #1e2a4a; /* Color for the background  */
+  --color-primary: #5548ee;
+  --color-border: #ffffff29;
+  --color-button: #e0b1cb;
 }
-
 .mainContainer {
   display: flex;
   justify-content: center;
-  margin-top: 71px;
 }
 .logoContainer {
   box-sizing: border-box;
-  background-color: var(--color-primary-blue);
+  background-color: rgba(94, 84, 142, 0.7);
   width: 384px;
   height: 84px;
   border-radius: 13px;
-  border: solid 3px var(--color-border);
+  border: solid 1px var(--color-border);
 }
 .logo {
   background-image: url("../../assets/images/logospaceview.png");
@@ -42,7 +35,6 @@
 }
 @media screen and (min-width: 1300px) {
   .mainContainer {
-    margin-top: 36px;
   }
   .logoContainer {
     width: 1405px;
