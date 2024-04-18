@@ -7,9 +7,7 @@ function ImgOfTheDay({ imgDay }) {
       <figure
         className={styles.box}
         style={{ backgroundImage: `url(${imgDay.url})` }}
-      >
-        {/* <img className={styles.image} src={imgDay.url} alt={imgDay.title} /> */}
-      </figure>
+      />
     </div>
   );
 }

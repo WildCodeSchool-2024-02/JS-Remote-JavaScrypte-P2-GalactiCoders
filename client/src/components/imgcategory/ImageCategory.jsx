@@ -8,7 +8,6 @@ function ImageCategory({ apiImage, handleImageClick }) {
       type="button"
       onClick={handleImageClick}
     >
-      {" "}
       <img
         className={styles.ImageCategory}
         src={apiImage.links[0].href}

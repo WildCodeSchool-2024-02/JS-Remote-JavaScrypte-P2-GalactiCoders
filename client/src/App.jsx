@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      "https://api.nasa.gov/planetary/apod?api_key=HTe12sCsEjed1E521B1vpAQ90k1IKIzLLbmWvRvy"
+      `https://api.nasa.gov/planetary/apod?api_key=${import.meta.env.VITE_API_KEY}`
     )
       .then((response) => response.json())
       .then((data) => setImgDay(data))

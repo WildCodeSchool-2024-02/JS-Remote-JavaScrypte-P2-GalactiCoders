@@ -1,21 +1,15 @@
 :root {
-  --color-border: #000000;
+  --color-primary: #5548ee;
+  --color-border: #ffffff29;
+  --color-button: #e0b1cb;
 }
 .category {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(
-    180deg,
-    rgb(141.0000067949295, 169.00000512599945, 196.00000351667404)
-      3.999999910593033%,
-    rgb(19.0000007674098, 49.00000087916851, 92.00000211596489)
-      44.999998807907104%,
-    rgb(19.0000007674098, 64.00000378489494, 116.00000068545341)
-      98.50000143051147%
-  );
-  border: solid 3px var(--color-border);
+  background-color: rgba(94, 84, 142, 0.7);
+  border: solid 1px var(--color-border);
   border-radius: 13px;
   margin-left: auto;
   margin-right: auto;

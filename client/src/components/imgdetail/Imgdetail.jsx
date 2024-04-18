@@ -5,6 +5,8 @@ import styles from "./ImgDetail.module.css";
 function ImgDetails({ selectedImage }) {
   const description = selectedImage.data[0].description.split(/[.!?]/);
   const firstTwoSentences = description.slice(0, 2).join(".");
+  const title = selectedImage.data[0].title.split(/[():.!?]/);
+  const firstTitle = title.slice(0, 1).join(":");
 
   return (
     <div className={styles.container}>
@@ -13,7 +15,7 @@ function ImgDetails({ selectedImage }) {
         src={selectedImage.links[0].href}
         alt={selectedImage.data[0].title}
       />
-      <h1 className={styles.title}>{selectedImage.data[0].title}</h1>
+      <h1 className={styles.title}>{firstTitle}</h1>
       <p className={styles.description}>{firstTwoSentences}</p>
       <Link to="http://localhost:3000/details" className={styles.detailsbutton}>
         About

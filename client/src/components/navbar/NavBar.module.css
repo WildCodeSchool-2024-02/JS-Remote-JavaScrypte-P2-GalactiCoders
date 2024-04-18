@@ -1,6 +1,7 @@
 :root {
-  --color-primary-blue: #134074;
-  --color-border: #000000;
+  --color-primary: #5548ee;
+  --color-border: #ffffff29;
+  --color-button: #e0b1cb;
 }
 .mainContainer {
   display: flex;
@@ -8,11 +9,11 @@
 }
 .logoContainer {
   box-sizing: border-box;
-  background-color: var(--color-primary-blue);
+  background-color: rgba(94, 84, 142, 0.7);
   width: 384px;
   height: 84px;
   border-radius: 13px;
-  border: solid 3px var(--color-border);
+  border: solid 1px var(--color-border);
 }
 .logo {
   background-image: url("../../assets/images/logospaceview.png");
