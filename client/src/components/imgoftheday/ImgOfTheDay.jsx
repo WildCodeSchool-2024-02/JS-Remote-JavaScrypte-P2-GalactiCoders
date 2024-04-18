@@ -12,7 +12,6 @@ function ImgOfTheDay ({imgDay}) {
 
 export default ImgOfTheDay;
 
-
 ImgOfTheDay.propTypes = {
     imgDay: PropTypes.string.isRequired,
 }
