@@ -3,8 +3,11 @@ import styles from "./ImageCategory.module.css";
 
 function ImageCategory({ apiImage, handleImageClick }) {
   return (
-    <button type="button" onClick={handleImageClick}>
-      {" "}
+    <button
+      className={styles.buttonImage}
+      type="button"
+      onClick={handleImageClick}
+    >
       <img
         className={styles.ImageCategory}
         src={apiImage.links[0].href}
