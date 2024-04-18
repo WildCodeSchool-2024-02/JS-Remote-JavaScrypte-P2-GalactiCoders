@@ -9,11 +9,11 @@ function App() {
   const [nebulaImage, setNebulaImage] = useState(null);
   const [hubbleImage, setHubbleImage] = useState(null);
   const [superNovaImage, setSuperNovaImage] = useState(null);
-  const [imgDay , setImgDay] = useState([])
+  const [imgDay , setImgDay] = useState([]);
   const [selectedImage, setSelectedImage] = useState();
-
+    
   useEffect (() => {
-    fetch("https://api.nasa.gov/planetary/apod?api_key=HTe12sCsEjed1E521B1vpAQ90k1IKIzLLbmWvRvy")
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=${import.meta.env.VITE_API_KEY}`)
     .then(response => response.json())
     .then(data => setImgDay(data))
     .catch(error => console.error("Error", error));
