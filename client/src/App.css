@@ -11,7 +11,7 @@ body {
   margin: 0 !important;
 }
 .mainBody {
-  background-image: url("../src/assets/images/Background.jpg");
+  background-image: url("./assets/images/Background.jpg");
   background-color: #1e2a4a;
   background-size: cover;
   padding-top: 71px;
