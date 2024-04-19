@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "space mono";
+  src: url("./assets/font/SpaceMono-Bold.ttf");
+}
+* {
+  font-family: "space mono";
+}
+html,
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.mainBody {
+  background-image: url("./assets/images/Background.jpg");
+  background-color: #1e2a4a;
+  background-size: cover;
+  padding-top: 71px;
+  padding-bottom: 3em;
+}
+@media screen and (min-width: 600px) {
+  .mainContainer {
+    position: relative;
+  }
+  .rightAside {
+    position: absolute;
+    top: 20em;
+    right: 5em;
+  }
+}

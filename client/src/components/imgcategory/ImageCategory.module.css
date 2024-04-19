@@ -1,0 +1,12 @@
+.ImageCategory {
+  border: 3px solid black;
+  border-radius: 12px;
+  max-width: 110px;
+  min-height: 110px;
+}
+.buttonImage {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}

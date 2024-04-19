@@ -1,23 +1,19 @@
-import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import styles from "./ImageOfTheDay.module.css";
 
-function ImgOfTheDay () {
-    const [imgDay , setImgDay] = useState([])
-
-     useEffect (() => {
-        fetch("https://api.nasa.gov/planetary/apod?api_key=HTe12sCsEjed1E521B1vpAQ90k1IKIzLLbmWvRvy")
-        .then(response => response.json())
-        .then(data => setImgDay(data))
-
-     }, [])
-
-
-    return (
-        <div className ={styles.box}>
-            <img className={styles.image} src={imgDay.url} alt={imgDay.title}  />
-        </div>
-
-    );
+function ImgOfTheDay({ imgDay }) {
+  return (
+    <div className={styles.mainContainer}>
+      <figure
+        className={styles.box}
+        style={{ backgroundImage: `url(${imgDay.url})` }}
+      />
+    </div>
+  );
 }
 
 export default ImgOfTheDay;
+
+ImgOfTheDay.propTypes = {
+  imgDay: PropTypes.string.isRequired,
+};
