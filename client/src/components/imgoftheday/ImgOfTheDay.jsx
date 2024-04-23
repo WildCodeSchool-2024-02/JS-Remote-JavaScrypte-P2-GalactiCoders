@@ -2,12 +2,13 @@ import PropTypes from "prop-types";
 import styles from "./ImageOfTheDay.module.css";
 
 function ImgOfTheDay({ imgDay }) {
-  return (
+   return (
     <div className={styles.mainContainer}>
+      {imgDay && (
       <figure
         className={styles.box}
-        style={{ backgroundImage: `url(${imgDay.url})` }}
-      />
+        style={{backgroundImage: `url(${imgDay.url.replaceAll(" ","%20")})` }}
+      />)}
     </div>
   );
 }

@@ -9,7 +9,7 @@ function App() {
   const [nebulaImage, setNebulaImage] = useState(null);
   const [hubbleImage, setHubbleImage] = useState(null);
   const [superNovaImage, setSuperNovaImage] = useState(null);
-  const [imgDay, setImgDay] = useState([]);
+  const [imgDay, setImgDay] = useState(null);
   const [selectedImage, setSelectedImage] = useState();
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function App() {
       .then((data) => setNebulaImage(data))
       .catch((error) => console.error("Error", error));
 
-    fetch("https://images-api.nasa.gov/search?keywords=hubble space")
+    fetch("https://images-api.nasa.gov/search?keywords=hubble%20space")
       .then((response) => response.json())
       .then((data) => setHubbleImage(data))
       .catch((error) => console.error("Error", error));
