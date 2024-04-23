@@ -1,32 +1,38 @@
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import NavBar from "../components/navbar/NavBar";
 import styles from "./DetailsPage.module.css";
 
 export default function DetailsPage() {
-  const [imgDay, setImgDay] = useState([]);
+  const [selectedObject, setSelectedObject] = useState(null);
+  const {id} = useParams();
+
   useEffect(() => {
-    fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=${import.meta.env.VITE_API_KEY}`
+    fetch(`https://images-api.nasa.gov/search?nasa_id=${id}`
+      
     )
       .then((response) => response.json())
-      .then((data) => setImgDay(data))
+      .then((data) => setSelectedObject(data))
       .catch((error) => console.error("Error", error));
-  }, []);
+  }, [id]);
 
   return (
     <div className={styles.detailMainContainer}>
       <NavBar />
-      <h1>{imgDay.title}</h1>
-      <h2>{imgDay.date}</h2>
-
+      {selectedObject && (
+      <>
+      <h1>{selectedObject.collection.items[0].data[0].title}</h1>
+      <h2>{selectedObject.collection.items[0].data[0].date_created}</h2>
       <div className={styles.imgContainer}>
         <img
-          alt={imgDay.title}
+          alt={selectedObject.collection.items[0].data[0].title}
           className={styles.catchfullImg}
-          src={imgDay.url}
+          src={selectedObject.collection.items[0].links[0].href}
         />
       </div>
-      <p className={styles.explanation}>{imgDay.explanation}</p>
-    </div>
+      <p className={styles.explanation}>{selectedObject.collection.items[0].data[0].description}</p>
+      </>
+      )}
+      </div>
   );
 }
