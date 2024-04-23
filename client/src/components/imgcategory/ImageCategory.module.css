@@ -9,4 +9,5 @@
   border: none;
   outline: none;
   box-shadow: none;
+  object-fit: contain;
 }

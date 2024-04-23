@@ -12,7 +12,7 @@
   align-self: center;
   border: solid 1px var(--color-border);
   border-radius: 1rem;
-
+  object-fit: cover;
   width: 320px;
   background-color: rgba(94, 84, 142, 0.7);
   margin: auto;
