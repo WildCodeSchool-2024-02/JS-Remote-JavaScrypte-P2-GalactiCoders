@@ -17,7 +17,7 @@ function ImgDetails({ selectedImage }) {
       />
       <h1 className={styles.title}>{firstTitle}</h1>
       <p className={styles.description}>{firstTwoSentences}</p>
-      <Link to="http://localhost:3000/details" className={styles.detailsbutton}>
+      <Link to={`details/${selectedImage.data[0].nasa_id}`} className={styles.detailsbutton}>
         About
       </Link>
     </div>
