@@ -7,13 +7,28 @@
   display: flex;
   justify-content: center;
 }
+.listContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  gap: 1em;
+  list-style: none;
+}
+ul li {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
 .logoContainer {
   box-sizing: border-box;
-  background-color: rgba(94, 84, 142, 0.7);
   width: 384px;
   height: 84px;
-  border-radius: 13px;
+  /* border-radius: 13px;
   border: solid 1px var(--color-border);
+  background-color: rgba(94, 84, 142, 0.7); */
 }
 .logo {
   background-image: url("../../assets/images/logospaceview.png");
