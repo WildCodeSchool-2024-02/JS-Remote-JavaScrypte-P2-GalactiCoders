@@ -3,7 +3,7 @@ import styles from "./Category.module.css";
 import ImageCategory from "../imgcategory/ImageCategory";
 
 function Category({ apiImage, handleImageClick }) {
-  const displayImg = apiImage.slice(6, 10);
+  const displayImg = apiImage.slice(20, 25);
 
   return (
     <div className={styles.category}>

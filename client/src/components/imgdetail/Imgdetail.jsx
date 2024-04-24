@@ -60,4 +60,3 @@ ImgDetails.propTypes = {
     ).isRequired,
   }).isRequired,
 };
-
