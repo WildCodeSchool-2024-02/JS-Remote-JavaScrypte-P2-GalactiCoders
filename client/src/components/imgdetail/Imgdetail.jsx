@@ -42,8 +42,21 @@ function ImgDetails({ selectedImage }) {
   );
 }
 
-ImgDetails.propTypes = {
-  selectedImage: PropTypes.string.isRequired,
-};
-
 export default ImgDetails;
+
+ImgDetails.propTypes = {
+  selectedImage: PropTypes.shape({
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        href: PropTypes.string.isRequired,
+      }).isRequired
+    ).isRequired,
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        description: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        nasa_id: PropTypes.string.isRequired,
+      }).isRequired
+    ).isRequired,
+  }).isRequired,
+};

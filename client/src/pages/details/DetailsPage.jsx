@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import NavBar from "../components/navbar/NavBar";
+import NavBar from "../../components/navbar/NavBar";
 import styles from "./DetailsPage.module.css";
 
 export default function DetailsPage() {
