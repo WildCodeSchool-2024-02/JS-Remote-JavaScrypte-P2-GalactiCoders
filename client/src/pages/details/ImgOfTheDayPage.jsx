@@ -11,6 +11,7 @@ export default function ImgOfTheDayPage() {
 
 
         return (
+        <div>
             <div className={styles.detailMainContainer}>
             <NavBar />
             <h1>{imgDay.title}</h1>
@@ -22,7 +23,9 @@ export default function ImgOfTheDayPage() {
                 src={imgDay.url.replaceAll(" ","%20")}
               />
             </div>
+            <a href={imgDay.url.replaceAll(" ","%20")}><button type="button">image HD</button></a>
             <p className={styles.explanation}>{imgDay.explanation}</p>
+            </div>
             </div>
         )
 

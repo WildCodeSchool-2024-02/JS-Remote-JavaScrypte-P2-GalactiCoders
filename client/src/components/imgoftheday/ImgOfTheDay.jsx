@@ -5,7 +5,6 @@ import styles from "./ImageOfTheDay.module.css";
 
 
 function ImgOfTheDay({ imgDay }) {
- 
    return (
     <div className={styles.mainContainer} >
       {imgDay && (
@@ -21,5 +20,14 @@ function ImgOfTheDay({ imgDay }) {
 export default ImgOfTheDay;
 
 ImgOfTheDay.propTypes = {
-  imgDay: PropTypes.string.isRequired,
+  imgDay: PropTypes.oneOfType([
+    PropTypes.shape({ 
+      url: PropTypes.string.isRequired,
+    }),
+    PropTypes.oneOf([null]),
+  ]),
+};
+
+ImgOfTheDay.defaultProps = {
+  imgDay: null,
 };
