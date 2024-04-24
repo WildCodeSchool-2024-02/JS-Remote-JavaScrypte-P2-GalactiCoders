@@ -12,13 +12,11 @@
   align-self: center;
   border: solid 1px var(--color-border);
   border-radius: 1rem;
-  object-fit: cover;
   width: 320px;
   background-color: rgba(94, 84, 142, 0.7);
   margin: auto;
   padding: 0.5rem;
 }
-
 .img {
   width: 320px;
   height: 190px;
@@ -58,4 +56,19 @@
     height: 230px;
     width: 400px;
   }
+}
+.closebutton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-button);
+  color: var(--color-primary);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
