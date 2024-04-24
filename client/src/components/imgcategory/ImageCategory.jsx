@@ -20,6 +20,17 @@ function ImageCategory({ apiImage, handleImageClick }) {
 export default ImageCategory;
 
 ImageCategory.propTypes = {
-  apiImage: PropTypes.string.isRequired,
+  apiImage: PropTypes.shape({
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        href: PropTypes.string.isRequired, 
+      })
+    ).isRequired,
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired, 
+      })
+    ).isRequired,
+  }).isRequired,
   handleImageClick: PropTypes.func.isRequired,
 };

@@ -3,7 +3,7 @@ import styles from "./Category.module.css";
 import ImageCategory from "../imgcategory/ImageCategory";
 
 function Category({ apiImage, handleImageClick }) {
-  const displayImg = apiImage.slice(6, 10);
+  const displayImg = apiImage.slice(20, 24);
 
   return (
     <div className={styles.category}>
@@ -21,6 +21,14 @@ function Category({ apiImage, handleImageClick }) {
 export default Category;
 
 Category.propTypes = {
-  apiImage: PropTypes.string.isRequired,
+  apiImage: PropTypes.arrayOf(
+    PropTypes.shape({
+      data: PropTypes.arrayOf(
+        PropTypes.shape({
+          title: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
+    }).isRequired
+  ).isRequired,
   handleImageClick: PropTypes.func.isRequired,
 };

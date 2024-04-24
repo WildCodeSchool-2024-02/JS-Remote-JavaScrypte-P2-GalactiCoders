@@ -2,30 +2,30 @@ import { useNavigate } from "react-router-dom";
 import styles from "./NavBar.module.css";
 
 function NavBar() {
-  const navigate = useNavigate();
+  const returnHome = useNavigate();
   return (
     <main className={styles.mainContainer}>
       <ul className={styles.listContainer}>
         <li
           type="button"
-          onClick={() => navigate("/category/Nebula")}
-          onKeyDown={() => navigate("/category/Nebula")}
+          onClick={() => returnHome("/category/Nebula")}
+          onKeyDown={() => returnHome("/category/Nebula")}
           role="none"
         >
           Nébula
         </li>
         <li
           type="button"
-          onClick={() => navigate("/category/Hubble")}
-          onKeyDown={() => navigate("/category/Hubble")}
+          onClick={() => returnHome("/category/Hubble")}
+          onKeyDown={() => returnHome("/category/Hubble")}
           role="none"
         >
           Hubble
         </li>
         <li
           type="button"
-          onClick={() => navigate("/category/Supernova")}
-          onKeyDown={() => navigate("/category/Supernova")}
+          onClick={() => returnHome("/category/Supernova")}
+          onKeyDown={() => returnHome("/category/Supernova")}
           role="none"
         >
           Supernova
@@ -36,8 +36,8 @@ function NavBar() {
           <div
             type="button"
             className={styles.logo}
-            onClick={() => navigate("/")}
-            onKeyDown={() => navigate("/")}
+            onClick={() => returnHome("/")}
+            onKeyDown={() => returnHome("/")}
             role="none"
           />
 
