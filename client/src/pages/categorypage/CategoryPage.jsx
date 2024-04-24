@@ -42,4 +42,4 @@ CategoryPage.defaultProps=
   {
    data:[],
    links:[]
-  }};
+  }} 
