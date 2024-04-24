@@ -21,6 +21,14 @@ function Category({ apiImage, handleImageClick }) {
 export default Category;
 
 Category.propTypes = {
-  apiImage: PropTypes.string.isRequired,
+  apiImage: PropTypes.arrayOf(
+    PropTypes.shape({
+      data: PropTypes.arrayOf(
+        PropTypes.shape({
+          title: PropTypes.string.isRequired,
+        }).isRequired
+      ).isRequired,
+    }).isRequired
+  ).isRequired,
   handleImageClick: PropTypes.func.isRequired,
 };
