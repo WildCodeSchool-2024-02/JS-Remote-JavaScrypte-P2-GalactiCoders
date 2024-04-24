@@ -8,27 +8,27 @@ function NavBar() {
       <ul className={styles.listContainer}>
         <li
           type="button"
-          onClick={() => navigate("/")}
-          onKeyDown={() => navigate("/")}
+          onClick={() => navigate("/category/Nebula")}
+          onKeyDown={() => navigate("/category/Nebula")}
           role="none"
         >
           Nébula
         </li>
         <li
           type="button"
-          onClick={() => navigate("/")}
-          onKeyDown={() => navigate("/")}
+          onClick={() => navigate("/category/Hubble")}
+          onKeyDown={() => navigate("/category/Hubble")}
           role="none"
         >
-          Planets
+          Hubble
         </li>
         <li
           type="button"
-          onClick={() => navigate("/")}
-          onKeyDown={() => navigate("/")}
+          onClick={() => navigate("/category/Supernova")}
+          onKeyDown={() => navigate("/category/Supernova")}
           role="none"
         >
-          Galaxy's
+          Supernova
         </li>
       </ul>
       <div className={styles.container}>
