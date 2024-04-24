@@ -1,14 +1,19 @@
+import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./ImageOfTheDay.module.css";
 
+
+
 function ImgOfTheDay({ imgDay }) {
+ 
    return (
-    <div className={styles.mainContainer}>
+    <div className={styles.mainContainer} >
       {imgDay && (
-      <figure
+      <NavLink  to='/details/imageoftheday'
         className={styles.box}
-        style={{backgroundImage: `url(${imgDay.url.replaceAll(" ","%20")})` }}
-      />)}
+        style={{backgroundImage: `url(${imgDay.url.replaceAll(" ","%20")})` }}/>
+      )}
+
     </div>
   );
 }

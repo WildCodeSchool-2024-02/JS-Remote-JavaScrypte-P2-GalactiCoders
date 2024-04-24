@@ -15,4 +15,5 @@
   border: 2px solid var(--color-border);
   background-size: cover;
   background-position: center;
+  z-index: 0;
 }
