@@ -20,9 +20,7 @@ export default function ImgOfTheDayPage() {
           />
         </div>
         <a href={imgDay.url.replaceAll(" ", "%20")}>
-          <button className={styles.btnImgOfTheday} type="button">
-            image HD
-          </button>
+          <button type="button">image HD</button>
         </a>
         <p className={styles.explanation}>{imgDay.explanation}</p>
       </div>

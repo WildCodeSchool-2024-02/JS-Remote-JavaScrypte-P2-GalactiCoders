@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+
 import PropTypes from "prop-types";
 import styles from "./Category.module.css";
 import ImageCategory from "../imgcategory/ImageCategory";
@@ -9,7 +10,7 @@ function Category({ apiImage, handleImageClick, titleCategory }) {
   return (
     <>
       <NavLink to={`category/${titleCategory}`}>
-        <h3 className={styles.TitleStyle}>{titleCategory}🔍</h3>
+        <h3>{titleCategory}🔍</h3>
       </NavLink>
       <div className={styles.category}>
         {displayImg.map((item) => (
