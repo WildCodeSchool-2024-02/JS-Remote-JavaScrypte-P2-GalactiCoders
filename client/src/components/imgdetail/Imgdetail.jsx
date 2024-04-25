@@ -49,9 +49,6 @@ function ImgDetails({ selectedImage }) {
     </div>
   );
 }
-ImgDetails.propTypes = {
-  selectedImage: PropTypes.string.isRequired,
-};
 
 export default ImgDetails;
 

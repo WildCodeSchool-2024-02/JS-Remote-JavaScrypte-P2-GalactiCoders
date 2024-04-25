@@ -1,8 +1,6 @@
 :root {
-  --color-primary: #5548ee;
   --color-border: #ffffff29;
 }
-
 .detailMainContainer {
   background-image: url("../src/assets/images/Background.jpg");
   background-color: #1e2a4a;
@@ -23,14 +21,4 @@
 .explanation {
   margin: auto;
   max-width: 65ch;
-}
-.btnImgOfTheday {
-  color: var(--color-primary);
-  background-color: #e0b1cb;
-  border: solid 2px var(--color-border);
-  border-radius: 2rem;
-  margin-bottom: 1em;
-}
-.btnImgOfTheday:hover {
-  background-color: #ffffff29;
 }

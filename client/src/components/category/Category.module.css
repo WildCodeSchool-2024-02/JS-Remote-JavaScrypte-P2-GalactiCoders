@@ -18,6 +18,19 @@
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
+a {
+  text-decoration: none;
+}
+.TitleStyle {
+  margin-left: 5%;
+}
+.TitleStyle:after:hover {
+  border: 3px solid #5548ee;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 1px #5548ee;
+}
 @media screen and (min-width: 600px) and (max-width: 1299px) {
   .category {
     margin-left: 5%;

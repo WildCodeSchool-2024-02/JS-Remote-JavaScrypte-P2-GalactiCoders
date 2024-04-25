@@ -51,18 +51,21 @@ function App() {
             <Category
               apiImage={nebulaImage.collection.items}
               handleImageClick={handleImageClick}
+              titleCategory="Nebula"
             />
           )}
           {hubbleImage && (
             <Category
               apiImage={hubbleImage.collection.items}
               handleImageClick={handleImageClick}
+              titleCategory="Hubble"
             />
           )}
           {superNovaImage && (
             <Category
               apiImage={superNovaImage.collection.items}
               handleImageClick={handleImageClick}
+              titleCategory="Supernova"
             />
           )}
         </div>
