@@ -19,8 +19,11 @@ const router = createBrowserRouter([
   {
     path: "/details/imageoftheday",
     element: <ImgOfTheDayPage />,
-    loader: () => fetch(`https://api.nasa.gov/planetary/apod?api_key=${import.meta.env.VITE_API_KEY}`),
-  }
+    loader: () =>
+      fetch(
+        `https://api.nasa.gov/planetary/apod?api_key=${import.meta.env.VITE_API_KEY}`
+      ),
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

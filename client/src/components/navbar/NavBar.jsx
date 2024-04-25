@@ -30,6 +30,14 @@ function NavBar() {
         >
           Supernova
         </li>
+        <li
+          type="button"
+          onClick={() => returnHome("/search")}
+          onKeyDown={() => returnHome("/search")}
+          role="none"
+        >
+          Search
+        </li>
       </ul>
       <div className={styles.container}>
         <div className={styles.logoContainer}>

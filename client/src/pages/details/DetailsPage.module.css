@@ -23,11 +23,13 @@
   margin: auto;
   max-width: 65ch;
 }
-
-button {
+.btnImgOfTheday {
   color: var(--color-primary);
   background-color: #e0b1cb;
   border: solid 2px var(--color-border);
   border-radius: 2rem;
   margin-bottom: 1em;
+}
+.btnImgOfTheday:hover {
+  background-color: #ffffff29;
 }

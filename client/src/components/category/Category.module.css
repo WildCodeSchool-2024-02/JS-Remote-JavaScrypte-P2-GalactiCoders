@@ -13,10 +13,7 @@
   margin-right: auto;
   margin-left: auto;
   margin-top: 20px;
-  /* border: solid 1px var(--color-border);
-  border-radius: 13px; */
   backdrop-filter: blur(1px) saturate(153%);
-
   background-color: rgba(23, 19, 23, 0.2);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);

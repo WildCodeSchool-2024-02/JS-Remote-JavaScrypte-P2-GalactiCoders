@@ -13,9 +13,6 @@
   align-self: center;
   margin: auto;
   padding: 0.5rem;
-  /* background-color: rgba(94, 84, 142, 0.7);
-  border: solid 1px var(--color-border);
-  border-radius: 1rem; */
   backdrop-filter: blur(1px) saturate(153%);
   -webkit-backdrop-filter: blur(5px) saturate(153%);
   background-color: rgba(23, 19, 23, 1);
@@ -51,6 +48,9 @@
   width: 5rem;
   align-self: flex-end;
 }
+.detailsbutton:hover {
+  background-color: #ffffff29;
+}
 @media screen and (min-width: 600px) {
   .container {
     align-self: center;
@@ -77,4 +77,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.closebutton:hover {
+  background-color: #ffffff29;
 }
