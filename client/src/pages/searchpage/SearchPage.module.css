@@ -48,3 +48,11 @@ h1 {
   transform: scale(1.1);
   box-shadow: 0 0 10px 1px #5548ee;
 }
+@media screen and (min-width: 350px) and (max-width: 1299px) {
+  .image {
+    max-width: 140px;
+    max-height: 140px;
+    min-width: 140px;
+    min-height: 140px;
+  }
+}
