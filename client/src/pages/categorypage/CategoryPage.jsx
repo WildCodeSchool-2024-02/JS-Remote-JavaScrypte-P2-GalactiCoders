@@ -22,7 +22,7 @@ const categoryData = useLoaderData();
     </>
   );
 }
-
-CategoryPage.propTypes = {
+  CategoryPage.propTypes = {
   categoryTitle: PropTypes.string.isRequired,
 };
+  
