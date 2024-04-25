@@ -22,24 +22,7 @@ const categoryData = useLoaderData();
     </>
   );
 }
-
-CategoryPage.propTypes = {
-  categoryTitle: PropTypes.shape({
-  data: PropTypes.arrayOf(
-  PropTypes.shape({
-    nasa_id: PropTypes.string.isRequired
-  })  
-    ).isRequired,
-  links: PropTypes.arrayOf(
-  PropTypes.shape({
-  href: PropTypes.string.isRequired
-})
-).isRequired
-})
+  CategoryPage.propTypes = {
+  categoryTitle: PropTypes.string.isRequired,
 };
-CategoryPage.defaultProps=
-  {categoryTitle:
-  {
-   data:[],
-   links:[]
-  }} 
+  

@@ -3,7 +3,7 @@ import { useState } from "react";
 import NavBar from "../../components/navbar/NavBar";
 import styles from "./SearchPage.module.css";
 
-export default function DetailsPage() {
+export default function SearchPage() {
 const [search, setSearch] = useState("");
 const [display, setDisplay] = useState([]);
  
