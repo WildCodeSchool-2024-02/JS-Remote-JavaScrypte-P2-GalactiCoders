@@ -28,7 +28,7 @@ export default function DetailsPage() {
               src={selectedObject.collection.items[0].links[0].href}
             />
           </div>
-          <p className={styles.explanation}>
+          <p role="none" className={styles.explanation}>
             {selectedObject.collection.items[0].data[0].description}
           </p>
         </>
