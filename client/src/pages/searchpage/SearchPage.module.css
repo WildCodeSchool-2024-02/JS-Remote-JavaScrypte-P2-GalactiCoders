@@ -1,0 +1,29 @@
+.searchMainContainer {
+  background-image: url("../src/assets/images/Background.jpg");
+  background-color: #1e2a4a;
+  background-size: cover;
+  padding-top: 71px;
+  padding-bottom: 3em;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3%;
+}
+.searchInput {
+  margin-top: 4%;
+}
+.image {
+  border: 3px solid black;
+  border-radius: 12px;
+  max-width: 150px;
+  min-height: 150px;
+}
+h1 {
+  text-align: center;
+}
