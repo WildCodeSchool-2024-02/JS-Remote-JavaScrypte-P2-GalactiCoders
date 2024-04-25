@@ -1,26 +1,74 @@
 :root {
   --color-primary: #5548ee;
-  --color-border: #ffffff29;
+  --color-border: #ffd60a;
   --color-button: #e0b1cb;
 }
 .mainContainer {
   display: flex;
   justify-content: center;
 }
+.listContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  padding: 0 0.5em 0.25em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+ul li:hover {
+  color: #fff;
+}
+ul li:before {
+  content: "";
+  position: absolute;
+  inset: calc(100% - 1px) 0 0 0;
+  background: #5548ee;
+  scale: 0 1;
+  transition:
+    0.3s,
+    translate 0s 0.3s;
+}
+ul:hover li:before {
+  scale: 1;
+}
+ul li:hover:before {
+  translate: 0;
+  transition: 0.3s;
+}
+ul:hover li:has(~ li:hover):before {
+  translate: 100% 0;
+  transition:
+    0.2s 0.2s,
+    scale 0s 0.4s;
+}
+ul:hover li:hover ~ li:before {
+  translate: -100% 0;
+  transition:
+    0.2s 0.2s,
+    scale 0s 0.4s;
+}
 .logoContainer {
   box-sizing: border-box;
-  background-color: rgba(94, 84, 142, 0.7);
   width: 384px;
-  height: 84px;
+  height: 120px;
   border-radius: 13px;
   border: solid 1px var(--color-border);
+  background-color: rgba(23, 19, 23, 0.2);
 }
 .logo {
-  background-image: url("../../assets/images/logospaceview.png");
-  background-size: 111px 84px;
+  background-image: url("../../assets/images/SPACEVIEW-removebg-preview.png");
+  background-size: 140px;
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: 21px;
+  background-position-y: 0px;
   height: 100%;
   width: 100%;
 }
@@ -39,9 +87,9 @@
     height: 106px;
   }
   .logo {
-    background-size: 169px 105px;
+    background-size: 180px;
     background-position-x: left;
-    background-position-y: 27px;
+    background-position-y: -40px;
     margin-left: 18px;
   }
 }

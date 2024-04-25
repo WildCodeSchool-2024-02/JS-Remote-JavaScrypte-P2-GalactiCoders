@@ -23,12 +23,12 @@ ImageCategory.propTypes = {
   apiImage: PropTypes.shape({
     links: PropTypes.arrayOf(
       PropTypes.shape({
-        href: PropTypes.string.isRequired, 
+        href: PropTypes.string.isRequired,
       })
     ).isRequired,
     data: PropTypes.arrayOf(
       PropTypes.shape({
-        title: PropTypes.string.isRequired, 
+        title: PropTypes.string.isRequired,
       })
     ).isRequired,
   }).isRequired,

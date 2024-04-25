@@ -10,8 +10,17 @@
 .image {
   border: 3px solid black;
   border-radius: 12px;
-  max-width: 150px;
-  min-height: 150px;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 200px;
+  min-height: 200px;
+}
+.image:hover {
+  border: 1px solid #5548ee;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 1px #5548ee;
 }
 h1 {
   text-align: center;

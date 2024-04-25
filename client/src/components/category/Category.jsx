@@ -1,24 +1,26 @@
 import { NavLink } from "react-router-dom";
+
 import PropTypes from "prop-types";
 import styles from "./Category.module.css";
 import ImageCategory from "../imgcategory/ImageCategory";
 
 function Category({ apiImage, handleImageClick, titleCategory }) {
-  const displayImg = apiImage.slice(20, 25);
+  const displayImg = apiImage.slice(20, 24);
 
   return (
     <>
-    <NavLink to={`category/${titleCategory}`}>
-      <h3>{titleCategory}🔍</h3></NavLink>
-    <div className={styles.category}>
-      {displayImg.map((item) => (
-        <ImageCategory
-          key={item.data[0].title}
-          apiImage={item}
-          handleImageClick={() => handleImageClick(item)}
-        />
-      ))}
-    </div>
+      <NavLink to={`category/${titleCategory}`}>
+        <h3>{titleCategory}🔍</h3>
+      </NavLink>
+      <div className={styles.category}>
+        {displayImg.map((item) => (
+          <ImageCategory
+            key={item.data[0].title}
+            apiImage={item}
+            handleImageClick={() => handleImageClick(item)}
+          />
+        ))}
+      </div>
     </>
   );
 }

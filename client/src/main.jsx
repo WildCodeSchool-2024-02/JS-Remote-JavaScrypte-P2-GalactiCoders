@@ -16,7 +16,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/search/",
-    element: <SearchPage/>,
+    element: <SearchPage />,
   },
   {
     path: "/details/:id",
@@ -25,22 +25,27 @@ const router = createBrowserRouter([
   {
     path: "/details/imageoftheday",
     element: <ImgOfTheDayPage />,
-    loader: () => fetch(`https://api.nasa.gov/planetary/apod?api_key=${import.meta.env.VITE_API_KEY}`),
+    loader: () =>
+      fetch(
+        `https://api.nasa.gov/planetary/apod?api_key=${import.meta.env.VITE_API_KEY}`
+      ),
   },
   {
     path: "/category/Nebula",
-    element: <CategoryPage categoryTitle="Nebula"/>,
-    loader: ()=> fetch("https://images-api.nasa.gov/search?keywords=nebula"),
+    element: <CategoryPage categoryTitle="Nebula" />,
+    loader: () => fetch("https://images-api.nasa.gov/search?keywords=nebula"),
   },
   {
     path: "/category/Hubble",
-    element: <CategoryPage categoryTitle="Hubble"/>,
-    loader: ()=> fetch("https://images-api.nasa.gov/search?keywords=hubble%20space"),
+    element: <CategoryPage categoryTitle="Hubble" />,
+    loader: () =>
+      fetch("https://images-api.nasa.gov/search?keywords=hubble%20space"),
   },
   {
     path: "/category/Supernova",
-    element: <CategoryPage categoryTitle="Supernova"/>,
-    loader: ()=> fetch("https://images-api.nasa.gov/search?keywords=supernova"),
+    element: <CategoryPage categoryTitle="Supernova" />,
+    loader: () =>
+      fetch("https://images-api.nasa.gov/search?keywords=supernova"),
   },
   {
     path: "/category/details/:id",

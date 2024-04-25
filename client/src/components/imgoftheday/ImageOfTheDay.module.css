@@ -4,7 +4,7 @@
 .mainContainer {
   display: flex;
   justify-content: center;
-  margin-top: -18px;
+  margin-top: -17px;
 }
 .box {
   display: flex;
@@ -16,6 +16,16 @@
   background-size: cover;
   background-position: center;
   z-index: 0;
+}
+@media screen and (min-width: 600px) and (max-width: 1299px) {
+  .box {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .box {
+    width: 1000px;
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 1299px) {
   .box {
