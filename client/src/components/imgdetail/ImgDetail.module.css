@@ -7,17 +7,18 @@
   color: #f1e7d9;
 }
 .container {
+  width: 320px;
   display: flex;
   flex-direction: column;
   align-self: center;
-  border: solid 1px var(--color-border);
-  border-radius: 1rem;
-  width: 320px;
-  background-color: rgba(94, 84, 142, 0.7);
   margin: auto;
   padding: 0.5rem;
+  backdrop-filter: blur(1px) saturate(153%);
+  -webkit-backdrop-filter: blur(5px) saturate(153%);
+  background-color: rgba(23, 19, 23, 1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
-
 .img {
   width: 320px;
   height: 190px;
@@ -39,38 +40,44 @@
 .detailsbutton {
   text-align: center;
   text-decoration: none;
-  background-color: #e0b1cb;
+  background-color: rgba(23, 19, 23, 0.2);
   color: var(--color-primary);
-  border: solid 2px var(--color-border);
+  border: 2px solid rgba(85, 72, 238, 1);
   font-weight: bold;
   border-radius: 2rem;
   width: 5rem;
   align-self: flex-end;
+}
+.detailsbutton:hover {
+  background-color: #ffffff29;
 }
 @media screen and (min-width: 600px) {
   .container {
     align-self: center;
     width: 400px;
     margin-top: 1%;
+    background-color: rgba(23, 19, 23, 0.2);
   }
   .img {
     height: 230px;
     width: 400px;
   }
 }
-
 .closebutton {
   position: absolute;
   top: 1rem;
   right: 1rem;
   width: 2rem;
   height: 2rem;
-  border: none;
+  border: 2px solid rgba(85, 72, 238, 1);
   border-radius: 50%;
-  background-color: var(--color-button);
+  background-color: rgba(23, 19, 23, 0.2);
   color: var(--color-primary);
   font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.closebutton:hover {
+  background-color: #ffffff29;
 }

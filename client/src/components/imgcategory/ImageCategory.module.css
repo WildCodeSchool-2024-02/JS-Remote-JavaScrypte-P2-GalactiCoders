@@ -1,12 +1,28 @@
 .ImageCategory {
   border: 3px solid black;
   border-radius: 12px;
-  max-width: 110px;
-  min-height: 110px;
+  max-width: 65px;
+  max-height: 65px;
+  min-width: 65px;
+  min-height: 65px;
 }
 .buttonImage {
   background: none;
   border: none;
   outline: none;
   box-shadow: none;
+  object-fit: contain;
+}
+.ImageCategory:hover {
+  border: 1px solid #5548ee;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 1px #5548ee;
+}
+@media screen and (min-width: 1300px) {
+  .ImageCategory {
+    max-width: 110px;
+    min-height: 110px;
+  }
 }

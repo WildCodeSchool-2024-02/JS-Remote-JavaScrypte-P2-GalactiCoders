@@ -5,12 +5,10 @@ import styles from "./DetailsPage.module.css";
 
 export default function DetailsPage() {
   const [selectedObject, setSelectedObject] = useState(null);
-  const {id} = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
-    fetch(`https://images-api.nasa.gov/search?nasa_id=${id}`
-      
-    )
+    fetch(`https://images-api.nasa.gov/search?nasa_id=${id}`)
       .then((response) => response.json())
       .then((data) => setSelectedObject(data))
       .catch((error) => console.error("Error", error));
@@ -20,19 +18,21 @@ export default function DetailsPage() {
     <div className={styles.detailMainContainer}>
       <NavBar />
       {selectedObject && (
-      <>
-      <h1>{selectedObject.collection.items[0].data[0].title}</h1>
-      <h2>{selectedObject.collection.items[0].data[0].date_created}</h2>
-      <div className={styles.imgContainer}>
-        <img
-          alt={selectedObject.collection.items[0].data[0].title}
-          className={styles.catchfullImg}
-          src={selectedObject.collection.items[0].links[0].href}
-        />
-      </div>
-      <p className={styles.explanation}>{selectedObject.collection.items[0].data[0].description}</p>
-      </>
+        <>
+          <h1>{selectedObject.collection.items[0].data[0].title}</h1>
+          <h2>{selectedObject.collection.items[0].data[0].date_created}</h2>
+          <div className={styles.imgContainer}>
+            <img
+              alt={selectedObject.collection.items[0].data[0].title}
+              className={styles.catchfullImg}
+              src={selectedObject.collection.items[0].links[0].href}
+            />
+          </div>
+          <p className={styles.explanation}>
+            {selectedObject.collection.items[0].data[0].description}
+          </p>
+        </>
       )}
-      </div>
+    </div>
   );
 }
