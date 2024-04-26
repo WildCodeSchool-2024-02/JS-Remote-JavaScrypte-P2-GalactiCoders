@@ -12,13 +12,14 @@
   height: 100px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 20px;
   backdrop-filter: blur(1px) saturate(153%);
   background-color: rgba(23, 19, 23, 0.2);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 a {
+  margin-left: 5%;
+  width: 40%;
   text-decoration: none;
 }
 .TitleStyle {
@@ -31,11 +32,9 @@ a {
   transform: scale(1.1);
   box-shadow: 0 0 10px 1px #5548ee;
 }
-a {
-  text-decoration: none;
-}
 h3 {
-  margin-left: 5%;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 @media screen and (min-width: 600px) and (max-width: 1299px) {
   .category {
@@ -49,5 +48,8 @@ h3 {
     margin-left: 5%;
     width: 800px;
     height: 150px;
+  }
+  a {
+    width: 10%;
   }
 }

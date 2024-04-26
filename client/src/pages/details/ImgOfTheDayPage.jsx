@@ -19,8 +19,8 @@ export default function ImgOfTheDayPage() {
             src={imgDay.url.replaceAll(" ", "%20")}
           />
         </div>
-        <a href={imgDay.url.replaceAll(" ", "%20")}>
-          <button type="button">image HD</button>
+        <a href={imgDay.hdurl.replaceAll(" ", "%20")} target="_blank" rel="noreferrer">
+          <button className={styles.btnImgOfTheday} type="button">image HD</button>
         </a>
         <p className={styles.explanation}>{imgDay.explanation}</p>
       </div>

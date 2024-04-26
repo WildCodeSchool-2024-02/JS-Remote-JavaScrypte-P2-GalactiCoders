@@ -12,7 +12,7 @@ function NavBar() {
           onKeyDown={() => returnHome("/category/Nebula")}
           role="none"
         >
-          Nébula
+          Nebula
         </li>
         <li
           type="button"

@@ -29,10 +29,7 @@ function ImgDetails({ selectedImage }) {
         className={styles.closebutton}
         type="submit"
         onClick={handleClick}
-      >
-        {" "}
-        x{" "}
-      </button>
+      >X</button>
       <img
         className={styles.img}
         src={selectedImage.links[0].href}

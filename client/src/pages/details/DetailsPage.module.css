@@ -25,11 +25,11 @@
   max-width: 65ch;
 }
 .btnImgOfTheday {
+  background-color: rgba(23, 19, 23, 0.5);
   color: var(--color-primary);
-  background-color: #e0b1cb;
-  border: solid 2px var(--color-border);
-  border-radius: 2rem;
-  margin-bottom: 1em;
+  border: 2px solid rgba(85, 72, 238, 1);
+  font-weight: bold;
+  border-radius: 2rem 2rem 2rem 2rem;
 }
 .btnImgOfTheday:hover {
   background-color: #ffffff29;

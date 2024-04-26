@@ -43,7 +43,7 @@ export default function SearchPage() {
         <div className={styles.container}>
           {display.map((item) => (
             <NavLink
-              to={`/category/details/${item.data[0].nasa_id}`}
+              to={`/details/${item.data[0].nasa_id}`}
               key={item.data[0].nasa_id}
             >
               <img

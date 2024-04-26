@@ -7,13 +7,13 @@ export default function CategoryPage({ categoryTitle }) {
   const categoryData = useLoaderData();
 
   return (
-    <>
+      <div className={styles.container}>
       <NavBar />
       <h1>{categoryTitle}</h1>
-      <div className={styles.container}>
+        <div className={styles.flex}>
         {categoryData.collection.items.map((item) => (
           <NavLink
-            to={`/category/details/${item.data[0].nasa_id}`}
+            to={`/details/${item.data[0].nasa_id}`}
             key={item.data[0].nasa_id}
           >
             <img
@@ -22,9 +22,11 @@ export default function CategoryPage({ categoryTitle }) {
               alt={item.data[0].title}
             />
           </NavLink>
-        ))}
+         
+        ))} 
+        </div>
       </div>
-    </>
+    
   );
 }
 CategoryPage.propTypes = {

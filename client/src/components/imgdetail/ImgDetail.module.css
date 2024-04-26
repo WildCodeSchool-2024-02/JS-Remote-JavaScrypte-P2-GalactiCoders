@@ -21,7 +21,6 @@
 }
 .img {
   width: 320px;
-  height: 190px;
   border: solid 1px var(--color-border);
   border-radius: 1rem;
 }
@@ -59,7 +58,6 @@
     background-color: rgba(23, 19, 23, 0.2);
   }
   .img {
-    height: 230px;
     width: 400px;
   }
 }
