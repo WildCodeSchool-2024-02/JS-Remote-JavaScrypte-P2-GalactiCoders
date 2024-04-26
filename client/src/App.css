@@ -19,7 +19,6 @@ body {
 }
 .mainBody {
   background-size: 100%;
-  padding-top: 71px;
   padding-bottom: 3em;
 }
 .rightAside {
@@ -41,5 +40,8 @@ body {
     position: absolute;
     top: 25em;
     right: 10em;
+  }
+  .mainBody {
+    padding-top: 71px;
   }
 }

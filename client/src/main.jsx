@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import DetailsPage from "./pages/details/DetailsPage";
 import ImgOfTheDayPage from "./pages/details/ImgOfTheDayPage";
 import CategoryPage from "./pages/categorypage/CategoryPage";
-import DetailsCategoryPage from "./pages/detailscategorypage/DetailsCategoryPage";
 import SearchPage from "./pages/searchpage/SearchPage";
 import App from "./App";
 
@@ -46,10 +45,6 @@ const router = createBrowserRouter([
     element: <CategoryPage categoryTitle="Supernova" />,
     loader: () =>
       fetch("https://images-api.nasa.gov/search?keywords=supernova"),
-  },
-  {
-    path: "/category/details/:id",
-    element: <DetailsCategoryPage />,
   },
 ]);
 
