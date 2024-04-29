@@ -8,11 +8,15 @@ export default function DetailsPage() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`https://images-api.nasa.gov/search?nasa_id=${id}`)
+    fetch(`${import.meta.env.VITE_API_SEARCH_URL}${id}`)
       .then((response) => response.json())
       .then((data) => setSelectedObject(data))
       .catch((error) => console.error("Error", error));
   }, [id]);
+
+  const handleBack = () => {
+    window.history.back();
+  };
 
   return (
     <div className={styles.detailMainContainer}>
@@ -28,6 +32,13 @@ export default function DetailsPage() {
               src={selectedObject.collection.items[0].links[0].href}
             />
           </div>
+            <button
+            type="button"
+            onClick={handleBack}
+            className={styles.BackButton}
+          >
+            🔙
+          </button>
           <p className={styles.explanation}>
             {selectedObject.collection.items[0].data[0].description}
           </p>

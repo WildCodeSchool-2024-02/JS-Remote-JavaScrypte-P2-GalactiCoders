@@ -22,12 +22,10 @@ export default function CategoryPage({ categoryTitle }) {
               alt={item.data[0].title}
             />
           </NavLink>
-         
-        ))} 
+      ))} 
         </div>
       </div>
-    
-  );
+      );
 }
 CategoryPage.propTypes = {
   categoryTitle: PropTypes.string.isRequired,

@@ -14,7 +14,7 @@ function ImgOfTheDay({ imgDay }) {
           role="none"
           className={styles.box}
           style={{
-            backgroundImage: `url(${imgDay.url.replaceAll(" ", "%20")})`,
+          backgroundImage: `url(${imgDay.url.replaceAll(" ", "%20")})`,
           }}
         />
       )}

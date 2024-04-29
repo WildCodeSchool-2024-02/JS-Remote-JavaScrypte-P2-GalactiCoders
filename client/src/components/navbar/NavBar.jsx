@@ -48,10 +48,6 @@ function NavBar() {
             onKeyDown={() => returnHome("/")}
             role="none"
           />
-
-          {/* <Link to="/" onClick={handleOnClick} className={styles.logo}>
-            Home
-          </Link> */}
         </div>
       </div>
     </main>

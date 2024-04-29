@@ -17,6 +17,17 @@ body {
   background-position: center center;
   background-attachment: fixed;
 }
+.backgroundImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.backgroundImage-active {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .mainBody {
   background-size: 100%;
   padding-bottom: 3em;

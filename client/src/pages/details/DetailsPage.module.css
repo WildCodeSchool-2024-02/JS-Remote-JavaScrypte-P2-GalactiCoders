@@ -2,11 +2,12 @@
   --color-primary: #5548ee;
   --color-border: #ffffff29;
 }
-
 .detailMainContainer {
-  background-image: url("../src/assets/images/Background.jpg");
-  background-color: #1e2a4a;
+  background-image: url("./assets/images/testbackground.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
   padding-top: 71px;
   padding-bottom: 3em;
   text-align: center;
@@ -18,11 +19,13 @@
 .imgContainer {
   display: flex;
   justify-content: center;
-  margin-bottom: 1em;
 }
 .explanation {
   margin: auto;
   max-width: 65ch;
+}
+.button {
+  margin: 0;
 }
 .btnImgOfTheday {
   background-color: rgba(23, 19, 23, 0.5);
@@ -33,4 +36,13 @@
 }
 .btnImgOfTheday:hover {
   background-color: #ffffff29;
+}
+.BackButton {
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 30px;
+  margin-right: 50px;
 }

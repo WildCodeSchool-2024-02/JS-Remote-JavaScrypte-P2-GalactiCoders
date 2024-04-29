@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import ImgOfTheDay from "./components/imgoftheday/ImgOfTheDay";
 import ImgDetails from "./components/imgdetail/Imgdetail";
 import NavBar from "./components/navbar/NavBar";
@@ -11,26 +11,36 @@ function App() {
   const [superNovaImage, setSuperNovaImage] = useState(null);
   const [imgDay, setImgDay] = useState(null);
   const [selectedImage, setSelectedImage] = useState();
-
+  const [isOpen, setIsOpen] = useState(false);
+  const switchClass = () => {
+      if (!isOpen) {
+        setIsOpen(true);
+    }
+  };
+  const unSwitchClass = () => {
+    setIsOpen(!isOpen);
+  }; 
+  const resetOnClose = useCallback(() => {
+    setSelectedImage();
+  },[]);
+  
   useEffect(() => {
-    fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=${import.meta.env.VITE_API_KEY}`
-    )
+    fetch(`${import.meta.env.VITE_API_IMGDAY_URL}${import.meta.env.VITE_API_KEY}`)
       .then((response) => response.json())
       .then((data) => setImgDay(data))
       .catch((error) => console.error("Error", error));
 
-    fetch("https://images-api.nasa.gov/search?keywords=nebula")
+    fetch(`${import.meta.env.VITE_API_NEBULA_URL}`)
       .then((response) => response.json())
       .then((data) => setNebulaImage(data))
       .catch((error) => console.error("Error", error));
 
-    fetch("https://images-api.nasa.gov/search?keywords=hubble%20space")
+    fetch(`${import.meta.env.VITE_API_HUBBLE_URL}`)
       .then((response) => response.json())
       .then((data) => setHubbleImage(data))
       .catch((error) => console.error("Error", error));
 
-    fetch("https://images-api.nasa.gov/search?keywords=supernova")
+    fetch(`${import.meta.env.VITE_API_SUPERNOVA_URL}`)
       .then((response) => response.json())
       .then((data) => setSuperNovaImage(data))
       .catch((error) => console.error("Error", error));
@@ -38,14 +48,14 @@ function App() {
 
   const handleImageClick = (item) => {
     setSelectedImage(item);
+    switchClass();
   };
 
   return (
     <main className="mainBody">
-      <div className="backgroundImage">
         <NavBar />
         <ImgOfTheDay imgDay={imgDay} />
-
+      <div className={`backgroundImage ${isOpen ? "backgroundImage-active" : ""}`}>
         <div className="mainContainer">
           {nebulaImage && (
             <Category
@@ -71,7 +81,10 @@ function App() {
         </div>
         <div className="rightAside">
           {selectedImage && (
-            <ImgDetails className="itemDetails" selectedImage={selectedImage} />
+            <ImgDetails className="itemDetails" 
+                        selectedImage={selectedImage}
+                        unSwitchClass={unSwitchClass}
+                        resetOnClose={resetOnClose} />
           )}
         </div>
       </div>
