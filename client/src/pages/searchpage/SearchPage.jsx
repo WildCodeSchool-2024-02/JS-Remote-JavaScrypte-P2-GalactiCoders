@@ -14,7 +14,7 @@ export default function SearchPage() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    fetch(`https://images-api.nasa.gov/search?q=${search}`)
+    fetch(`${import.meta.env.VITE_API_SEARCH_URL}${search}`)
       .then((response) => response.json())
       .then((data) => setDisplay(data.collection.items))
       .catch((error) => console.error("Error", error));

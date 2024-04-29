@@ -1,10 +1,13 @@
-/* import { useState, useEffect } from "react"; */
 import { useLoaderData } from "react-router-dom";
 import NavBar from "../../components/navbar/NavBar";
 import styles from "./DetailsPage.module.css";
 
 export default function ImgOfTheDayPage() {
   const imgDay = useLoaderData();
+
+  const handleBack = () => {
+    window.history.back();
+  };
 
   return (
     <div>
@@ -19,7 +22,14 @@ export default function ImgOfTheDayPage() {
             src={imgDay.url.replaceAll(" ", "%20")}
           />
         </div>
-        <a href={imgDay.hdurl.replaceAll(" ", "%20")} target="_blank" rel="noreferrer">
+          <button
+            type="button"
+            onClick={handleBack}
+            className={styles.BackButton}
+          >
+            🔙
+          </button>
+        <a href={imgDay.hdurl.replaceAll(" ", "%20")} target="_blank" rel="noreferrer" className={styles.button}>
           <button className={styles.btnImgOfTheday} type="button">image HD</button>
         </a>
         <p className={styles.explanation}>{imgDay.explanation}</p>
