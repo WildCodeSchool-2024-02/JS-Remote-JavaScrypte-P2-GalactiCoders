@@ -1,0 +1,48 @@
+:root {
+  --color-primary: #5548ee;
+  --color-border: #ffffff29;
+}
+.detailMainContainer {
+  background-image: url("./assets/images/testbackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  padding-top: 71px;
+  padding-bottom: 3em;
+  text-align: center;
+}
+.catchfullImg {
+  border-radius: 1em;
+  border: solid 1px var(--color-border);
+}
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}
+.explanation {
+  margin: auto;
+  max-width: 65ch;
+}
+.button {
+  margin: 0;
+}
+.btnImgOfTheday {
+  background-color: rgba(23, 19, 23, 0.5);
+  color: var(--color-primary);
+  border: 2px solid rgba(85, 72, 238, 1);
+  font-weight: bold;
+  border-radius: 2rem 2rem 2rem 2rem;
+}
+.btnImgOfTheday:hover {
+  background-color: #ffffff29;
+}
+.BackButton {
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 30px;
+  margin-right: 50px;
+}
