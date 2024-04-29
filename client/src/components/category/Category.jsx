@@ -9,7 +9,7 @@ function Category({ apiImage, handleImageClick, titleCategory }) {
 
   return (
     <>
-      <NavLink to={`category/${titleCategory}`}>
+      <NavLink to={`category/${titleCategory}`} className={styles.categoyLink}>
         <h3>{titleCategory}🔍</h3>
       </NavLink>
       <div className={styles.category}>
